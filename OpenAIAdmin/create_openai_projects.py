@@ -4,8 +4,6 @@ Script to create OpenAI projects from a spreadsheet containing team names and em
 Requires OpenAI API key with admin privileges.
 """
 
-import csv
-import json
 import logging
 import sys
 from typing import List, Dict, Optional
