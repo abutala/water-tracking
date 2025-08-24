@@ -11,7 +11,7 @@ This script automates the creation of OpenAI projects from a spreadsheet contain
 
 2. Set your OpenAI API key:
    ```bash
-   export OPENAI_API_KEY="your-api-key-here"
+   export OPENAI_API_KEY="your-api-key-here"  # nosecret
    ```
 
 ## Usage
@@ -23,7 +23,7 @@ python create_openai_projects.py sample_teams.csv
 
 ### With API key as argument
 ```bash
-python create_openai_projects.py sample_teams.csv --api-key "your-api-key"
+python create_openai_projects.py sample_teams.csv --api-key "your-api-key"  # nosecret
 ```
 
 ### Dry run (preview without creating)
