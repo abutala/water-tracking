@@ -13,17 +13,18 @@ A Python system for managing Tesla Powerwall operations with automated power man
 
 ## Setup
 
-### Prerequisites
-
 From the project root directory:
 
 ```bash
-# Install dependencies
-uv sync
-
-# Initialize Git submodules (includes TeslaPy)
-git submodule update --init --recursive
+make setup
 ```
+
+This will:
+
+- Install project dependencies with `uv sync`
+- Initialize Git submodules (including TeslaPy)
+- Set up pre-commit hooks
+- Configure the development environment
 
 ### Environment Configuration
 
