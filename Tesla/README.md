@@ -47,7 +47,7 @@ The system uses TeslaPy for Tesla API access. You'll need to authenticate once:
 
 ```bash
 # Run TeslaPy GUI for initial authentication
-cd ext_lib/TeslaPy
+cd lib/TeslaPy
 python gui.py
 ```
 
@@ -55,7 +55,7 @@ This will open a browser window for Tesla OAuth authentication. Follow the promp
 
 ## Usage
 
-All commands should be run from the Tesla directory:
+Run commands from the project root directory:
 
 ### Basic Power Management
 
@@ -159,21 +159,25 @@ uv run python -m pytest test_manage_power_clean.py::TestBatteryHistory -v
 If you see "Tesla token expired" errors:
 
 ```bash
-cd ../ext_lib/TeslaPy
+cd lib/TeslaPy
 python gui.py
 ```
 
 This will refresh your Tesla authentication token.
 
-### TeslaPy Not Found
+### TeslaPy Submodule Issues
 
-Ensure the ext_lib directory is properly created and TeslaPy is cloned:
+Ensure the TeslaPy submodule is properly initialized:
 
 ```bash
-ls -la ext_lib/TeslaPy/
+# Initialize submodules if not already done
+git submodule update --init --recursive
+
+# Verify TeslaPy is available
+ls -la lib/TeslaPy/
 ```
 
-You should see the TeslaPy files including `teslapy.py`.
+You should see the TeslaPy files including the `teslapy` directory.
 
 ### Constants Configuration
 
