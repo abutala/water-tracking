@@ -270,7 +270,7 @@ class PowerwallManager:
 
     def run_monitoring_loop(self) -> None:
         """Main monitoring loop."""
-        with TeslaClient(self.email, verify=False, proxy=None, sso_base_url=None) as client:
+        with TeslaClient(self.email, verify=False) as client:
             product = client.battery_list()[0]
             site_name = product["site_name"]
             logging.info(f"Connected to site: {site_name}")
