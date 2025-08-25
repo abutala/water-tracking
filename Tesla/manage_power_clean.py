@@ -11,7 +11,7 @@ from typing import List, Optional
 import importlib
 from lib import Constants
 from lib import MyPushover
-from ext_lib.TeslaPy.teslapy import Tesla as TeslaClient
+from lib.TeslaPy.teslapy import Tesla as TeslaClient
 
 
 @dataclass
