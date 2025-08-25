@@ -13,49 +13,19 @@ A Python system for managing Tesla Powerwall operations with automated power man
 
 ## Setup
 
-### Quick Setup
-
-Run the automated setup script from the Tesla directory:
-
-```bash
-./setup.sh
-```
-
-This will:
-
-- Install project dependencies with `uv sync`
-- Create the `ext_lib` directory structure
-- Clone TeslaPy from GitHub
-- Copy the Constants template
-- Verify the installation
-
-### Manual Setup
-
-If you prefer manual setup:
-
-#### Prerequisites
+### Prerequisites
 
 From the project root directory:
 
 ```bash
+# Install dependencies
 uv sync
+
+# Initialize Git submodules (includes TeslaPy)
+git submodule update --init --recursive
 ```
 
-#### Create External Libraries Directory
-
-The Tesla module requires TeslaPy to be installed in an external libraries directory:
-
-```bash
-# Create the ext_lib directory structure
-mkdir -p ext_lib
-
-# Clone TeslaPy into the ext_lib directory
-cd ext_lib
-git clone https://github.com/tdorssers/TeslaPy.git TeslaPy
-cd ..
-```
-
-#### Environment Configuration
+### Environment Configuration
 
 1. Copy the Constants template:
 
