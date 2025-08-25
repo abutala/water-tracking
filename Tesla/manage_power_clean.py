@@ -9,8 +9,8 @@ import time
 from dataclasses import dataclass
 from typing import List, Optional
 import importlib
-from lib.Constants import Constants
-from lib.MyPushover import MyPushover
+from lib import Constants
+from lib import MyPushover
 from ext_lib.TeslaPy.teslapy import Tesla as TeslaClient
 
 
